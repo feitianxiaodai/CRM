@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a916b3b8a53b46d9a3e81c818eb668b0" Name="Diagram1">
+        <EntityTypeShape EntityType="CRMModel.sysFunction" Width="1.5" PointX="10.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.sysKeyValue" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.sysMenus" Width="1.5" PointX="8" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.sysOrganStruct" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.sysPermissList" Width="1.5" PointX="12.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.sysRole" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.sysUserInfo" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.sysUserInfo_Role" Width="1.5" PointX="7.5" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.wfProcess" Width="1.5" PointX="7.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.wfRequestForm" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.wfWork" Width="1.5" PointX="5.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.wfWorkBranch" Width="1.5" PointX="10.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CRMModel.wfWorkNodes" Width="1.5" PointX="8" PointY="6.625" IsExpanded="true" />
+        <AssociationConnector Association="CRMModel.FK_sysFunction_sysMenus" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysPermissList_sysFunction" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_OrganStruct_KeyValue" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysRole_sysKeyValue" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfProcess_sysKeyValue" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfRequestForm_sysKeyValue" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfRequestForm_sysKeyValue1" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfWorkNodes_sysKeyValue" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfWorkNodes_sysKeyValue1" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysPermissList_sysMenus" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysRole_sysOrganStruct" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysUserInfo_sysOrganStruct" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysUserInfo_sysOrganStruct1" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysUserInfo_sysOrganStruct2" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysPermissList_sysRole" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysUserInfo_Role_sysRole" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_sysUserInfo_Role_sysUserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfProcess_sysUserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfRequestForm_sysUserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfProcess_wfRequestForm" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfProcess_wfWorkNodes" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfRequestForm_wfWork" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfWorkNodes_wfWork" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfWorkBranch_wfWorkNodes" ManuallyRouted="false" />
+        <AssociationConnector Association="CRMModel.FK_wfWorkBranch_wfWorkNodes1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
