@@ -233,6 +233,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Crm.EntityMapping\Crm.EntityMapping.csproj">
+      <Project>{2705fd0c-c481-4cd0-a29b-c14e1eb8560c}</Project>
+      <Name>Crm.EntityMapping</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Crm.IRepository\Crm.IRepository.csproj">
       <Project>{21fc9d1c-66c0-4802-8f23-22613ff541a0}</Project>
       <Name>Crm.IRepository</Name>

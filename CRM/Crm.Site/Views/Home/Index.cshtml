@@ -1,5 +1,13 @@
-﻿@{
+﻿@model IEnumerable<Crm.Model.ModelViews.sysKeyValueView>
+@{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+@if(Model!=null)
+{
+    foreach (var item in Model)
+    {
+        <h2>@item.KName</h2>
+    }
+}
