@@ -27,6 +27,11 @@ namespace Crm.Site.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Login()
         {
+            //1.0获取记住三天的cookie是否有
+            if(Request.Cookies[Keys.remember]!=null)
+            {
+                ViewBag.ischeck=true;
+            }
             return View();
         }
 
@@ -65,7 +70,24 @@ namespace Crm.Site.Areas.Admin.Controllers
                 }
                 //将userinfo保存到session中
                 Session[Keys.Uinfo] = userInfo;
-                return RedirectToAction("/Admin/Home/Index");
+
+                //4.0是否记住三天
+                if (Request.Form["remember"] != null)
+                {
+                    //用户选择记住三天,将用户的id写入cookie
+                    //userInfo.uID
+                    HttpCookie cookie = new HttpCookie(Keys.remember, userInfo.uID.ToString());
+                    cookie.Expires = DateTime.Now.AddDays(3);
+                    Response.Cookies.Add(cookie);
+                }
+                else
+                {
+                    //用户没有勾选则应该手动清空
+                    HttpCookie cookie = new HttpCookie(Keys.remember, "");
+                    cookie.Expires = DateTime.Now.AddYears(-1);
+                    Response.Cookies.Add(cookie);
+                }
+                return Redirect("/Admin/Home/Index");
             }
             catch (Exception ex)
             {
