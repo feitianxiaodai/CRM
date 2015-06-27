@@ -133,6 +133,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\VcodeController.cs" />
+    <Compile Include="Areas\Chat\ChatAreaRegistration.cs" />
+    <Compile Include="Areas\workflow\workflowAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -140,6 +146,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\admin\Login.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -196,6 +203,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Areas\Admin\Views\Web.config" />
+    <Content Include="Areas\Chat\Views\Web.config" />
+    <Content Include="Areas\workflow\Views\Web.config" />
+    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -227,19 +238,27 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\Chat\Controllers\" />
+    <Folder Include="Areas\Chat\Models\" />
+    <Folder Include="Areas\Chat\Views\Shared\" />
+    <Folder Include="Areas\workflow\Controllers\" />
+    <Folder Include="Areas\workflow\Models\" />
+    <Folder Include="Areas\workflow\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Crm.Common\Crm.Common.csproj">
+      <Project>{1cb3ed1b-27d4-4c83-9aec-3779574a1966}</Project>
+      <Name>Crm.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Crm.EntityMapping\Crm.EntityMapping.csproj">
       <Project>{2705fd0c-c481-4cd0-a29b-c14e1eb8560c}</Project>
       <Name>Crm.EntityMapping</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Crm.IRepository\Crm.IRepository.csproj">
-      <Project>{21fc9d1c-66c0-4802-8f23-22613ff541a0}</Project>
-      <Name>Crm.IRepository</Name>
     </ProjectReference>
     <ProjectReference Include="..\Crm.IServices\Crm.IServices.csproj">
       <Project>{69241f6f-cd86-4fa2-a51b-e2e7391c727a}</Project>
@@ -249,13 +268,9 @@
       <Project>{d6af9fac-111e-498b-a9f7-b7e011f744e8}</Project>
       <Name>Crm.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Crm.Repository\Crm.Repository.csproj">
-      <Project>{df59ede8-05ae-4657-acca-a817120bd52b}</Project>
-      <Name>Crm.Repository</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Crm.Services\Crm.Services.csproj">
-      <Project>{e215c21e-4199-41b0-9b43-3ba7b9ec0dfe}</Project>
-      <Name>Crm.Services</Name>
+    <ProjectReference Include="..\Crm.WebHelper.cs\Crm.WebHelper.cs.csproj">
+      <Project>{20e8d793-c853-4b81-9fcc-1fd5490f5c70}</Project>
+      <Name>Crm.WebHelper.cs</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

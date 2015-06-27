@@ -13,32 +13,10 @@ namespace Crm.IServices
     
     public partial interface IsysUserInfoServices:IBaseServices<sysUserInfo>
     {
-      
-    
-      
-      
+
+        sysUserInfo CheckUser(string uname, string md5pwd);
       
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-    
-     
-     
-     
-     
-     
      
     }
 }

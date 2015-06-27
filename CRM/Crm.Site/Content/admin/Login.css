@@ -1,0 +1,56 @@
+﻿*{
+    margin:0px;
+    padding:0px;
+}
+
+.bgcolor {
+    background-color: #808080;
+}
+
+.content {
+    height: 336px;
+    width: 351px;
+    margin: 100px auto;
+    background-color: white;
+}
+
+
+.leftboder {
+    border-left: 2px solid #35aa47;
+    width: 291px;
+    height: 30px;
+}
+
+    .leftboder input {
+        padding: 0px;
+        margin: 0px;
+        height: 28px;
+        border-radius: 7px;
+    }
+
+.content li {
+    list-style: none;
+    margin: 15px;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.content .innerDiv {
+    width: 281px;
+   padding-top:20px;
+}
+
+.field-validation-error {
+    color:red;
+}
+
+.validation-summary-errors {
+    color:red;
+    position:relative;
+    top:10px;
+    left:0px;        
+}
+

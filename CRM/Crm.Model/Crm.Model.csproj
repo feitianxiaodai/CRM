@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums.cs" />
     <Compile Include="JKCRM.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,6 +68,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JKCRM_ModelView.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModelViews\LoginInfo.cs" />
     <Compile Include="ModelViews\sysFunction.cs">
       <DependentUpon>JKCRM_ModelView.tt</DependentUpon>
     </Compile>

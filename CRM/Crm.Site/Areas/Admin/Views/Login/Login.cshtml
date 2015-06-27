@@ -1,0 +1,76 @@
+﻿@model Crm.Model.ModelViews.LoginInfo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/admin/Login.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.8.2.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+</head>
+<body class="bgcolor">
+    <div class="content">
+        @using (Html.BeginForm("Login", "Login"))
+        {
+            @Html.ValidationSummary(true)
+            <div class="innerDiv">
+                <ul>
+                    <li>
+                        <span class="title">登录后台管理系统</span>
+                    </li>
+                    <li>
+                        <div class="leftboder">
+                            @Html.TextBoxFor(c => c.uLoginName)
+                        </div>
+                        <div>
+                            @Html.ValidationMessageFor(c => c.uLoginName)
+                        </div>
+                    </li>
+                    <li>
+                        <div class="leftboder">
+                            @Html.PasswordFor(c => c.uLoginPWD)
+                        </div>
+                        <div>
+                            @Html.ValidationMessageFor(c => c.uLoginPWD)
+                        </div>
+                    </li>
+                    <li>
+                        <div class="leftboder">
+                            @Html.TextBoxFor(c => c.Vcode, new { style = "width:80px" })
+                            <img src="@Url.Action("GetVcode", "Vcode")" id="imgvcode" style="cursor:pointer" height="25" width="65" />
+                        </div>
+                        <div>
+                            @Html.ValidationMessageFor(c => c.Vcode)
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            记住3天 <input type="checkbox" value="1" name="remember" />
+                        </div>
+                    </li>
+                    <li>
+                        <input type="submit" value="登录" />
+                    </li>
+                </ul>
+            </div>
+        }
+    </div>
+    <script type="text/javascript">
+        $(function () {
+            $("#imgvcode").click(function () {
+                this.src = '@Url.Action("GetVcode", "Vcode")' + "?rid=" + Math.random();
+            });
+        })
+    </script>
+</body>
+
+</html>
+
+
